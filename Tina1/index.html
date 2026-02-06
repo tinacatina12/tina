@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 My Dearest Tina | A Cinematic Valentine Experience</title>
+    
+    <!-- Bootstrap 5 with Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&family=Montserrat:wght@900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Advanced Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/EasePack.min.js"></script>
+    
+    <!-- SweetAlert & Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    
+    <style>
+        :root {
+            --deep-pink: #E84393;
+            --soft-pink: #FD79A8;
+            --gold: #FFD700;
+            --glass-bg: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --love-red: #FF4D6D;
+            --passion-purple: #9D4EDD;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%);
+            color: white;
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        /* === ENHANCED HERO SECTION === */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(232, 67, 147, 0.1), rgba(255, 215, 0, 0.05));
+        }
+
+        .hero-content {
+            text-align: center;
+            padding: 2rem;
+            z-index: 10;
+        }
+
+        .romantic-quote {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            opacity: 0;
+        }
+
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* === MAGIC BUTTON ENHANCEMENT === */
+        .magic-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4d96ff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.7);
+            animation: gradient-shift 3s ease infinite, glow-pulse 2s ease-in-out infinite;
+            cursor: pointer;
+            display: inline-block;
+            padding: 25px 50px;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .magic-text::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4d96ff);
+            border-radius: 27px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .magic-text:hover::before {
+            opacity: 0.3;
+        }
+
+        .magic-text:hover {
+            transform: scale(1.08) translateY(-5px);
+            box-shadow: 0 0 60px rgba(255, 107, 107, 0.6);
+            letter-spacing: 5px;
+        }
+
+        /* === CONTENT-RICH CARDS === */
+        .love-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--deep-pink), var(--gold));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .love-card:hover::before {
+            opacity: 1;
+        }
+
+        .love-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--deep-pink), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        /* === ROMANTIC TIMELINE === */
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            padding-left: 3rem;
+            border-left: 3px solid var(--deep-pink);
+        }
+
+        .timeline-date {
+            position: absolute;
+            left: -3.5rem;
+            top: 0;
+            background: var(--deep-pink);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(232, 67, 147, 0.3);
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* === ENHANCED FORM === */
+        .love-form {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+            backdrop-filter: blur(25px);
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* === FLOATING BUTTONS === */
+        .floating-buttons {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .social-btn {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-btn::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: 50%;
+            filter: blur(10px);
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+
+        .youtube-btn {
+            background: linear-gradient(135deg, #FF0000, #C4302B);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-8px) scale(1.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .social-tooltip {
+            position: absolute;
+            right: 75px;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.4s ease;
+            white-space: nowrap;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-btn:hover .social-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* === ROMANTIC TYPOGRAPHY === */
+        .script-heading {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: var(--gold);
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+            margin-bottom: 2rem;
+        }
+
+        .poem-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border-left: 4px solid var(--deep-pink);
+            border-right: 4px solid var(--soft-pink);
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .magic-text {
+                font-size: 2.5rem;
+                padding: 20px 30px;
+            }
+            
+            .script-heading {
+                font-size: 2.5rem;
+            }
+            
+            .love-form {
+                padding: 2rem;
+            }
+            
+            .floating-buttons {
+                right: 20px;
+                bottom: 20px;
+            }
+            
+            .social-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+        }
+
+        /* === ANIMATION CLASSES === */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .rotate-in {
+            opacity: 0;
+            transform: rotateY(90deg);
+        }
+
+        /* === MUSIC PLAYER STYLING === */
+        .music-player-card {
+            background: linear-gradient(145deg, rgba(232, 67, 147, 0.15), rgba(255, 215, 0, 0.1));
+            border-radius: 25px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .song-description {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION WITH RICH CONTENT -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Romantic Quote -->
+                <div class="romantic-quote heartbeat">
+                    "In your eyes, I found my home. In your heart, I found my love."
+                </div>
+                
+                <!-- Enhanced Main Title -->
+                <h1 class="display-1 fw-bold mb-3">
+                    To My <span class="text-gradient" style="background: linear-gradient(45deg, var(--deep-pink), var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent;">Forever Valentine</span>
+                </h1>
+                
+                <!-- Recipient Name with Special Styling -->
+                <div class="recipient-container my-4">
+                    <h2 class="display-2" style="font-family: 'Great Vibes', cursive; color: var(--gold);">
+                        My Dearest Tina
+                    </h2>
+                    <p class="lead fs-3 mt-2">You are the missing piece I never knew I needed</p>
+                </div>
+                
+                <!-- Enhanced Magic Text -->
+                <div class="magic-text-container text-center my-5">
+                    <div class="magic-text" id="magicText">
+                        ✨ CLICK FOR MAGIC ✨
+                    </div>
+                    <p class="mt-3 fs-5">Discover the love story written just for you</p>
+                </div>
+                
+                <!-- Romantic Description -->
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-8">
+                        <div class="love-card">
+                            <div class="card-icon">
+                                <i class="bi bi-heart-fill"></i>
+                            </div>
+                            <h3 class="mb-3">My Heart's True North</h3>
+                            <p class="fs-5">
+                                From the moment our paths crossed, my world gained colors I never knew existed. 
+                                Your laughter became my favorite melody, your smile my daily sunshine. 
+                                This digital creation is but a pale reflection of the love that fills my heart for you.
+                            </p>
+                            <p class="mt-3 fs-5">
+                                Every day with you feels like a page from the most beautiful love story ever written.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <div class="mt-5">
+                    <a href="#story" class="btn btn-outline-light btn-lg px-5 py-3 fs-4">
+                        Begin Our Journey <i class="bi bi-arrow-down ms-3 heartbeat"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR LOVE STORY SECTION -->
+    <section class="py-5" id="story" style="background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(12, 12, 12, 0.9));">
+        <div class="container">
+            <h2 class="script-heading text-center mb-5">
+                Our Beautiful Journey
+            </h2>
+            
+            <!-- Romantic Poem -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="poem-text">
+                        "Two hearts that beat as one,<br>
+                        Under the same moon, the same sun.<br>
+                        A love that grows with every day,<br>
+                        In every single, special way."
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Timeline -->
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-date">The Beginning</div>
+                    <div class="timeline-content">
+                        <h4 class="mb-3">When Stars Aligned</h4>
+                        <p class="fs-5">
+                           I remember our first conversation back in September 2023 like it was yesterday. That was the moment I approached you, not knowing it would be the beginning of a journey that has carried us all the way to now, 2026. From the very first exchange, something felt right. The way you spoke, the ease of our connection, the quiet excitement in those early moments—I knew there was something special about you. What started as a simple conversation slowly turned into shared days, moving around Kampala, laughing, talking endlessly, and creating memories I’ll always treasure. Every moment since has only made me more grateful that our journey began that day.
+                        </p>
+                        <p class="mt-3 text-muted">
+                            <i class="bi bi-heart me-2"></i> The moment I realized: This is where I'm meant to be
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Growing Together</div>
+                    <div class="timeline-content">
+                        <h4 class="mb-3">Adventures of the Heart</h4>
+                        <p class="fs-5">
+                           Our time together has shown me how naturally we fit into each other’s lives.
+Even in simple moments—moving around Kampala, sharing laughs, talking endlessly, or just being side by side—everything feels richer because I’m with you.
+Your strength inspires me, your kindness stays with me, and your love has changed me in the most beautiful way.
+                        </p>
+                        <p class="mt-3 text-muted">
+                            <i class="bi bi-stars me-2"></i> Memories made: Countless | Hearts connected: Forever
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Today & Always</div>
+                    <div class="timeline-content">
+                        <h4 class="mb-3">My Promise to You</h4>
+                        <p class="fs-5">
+                            Every morning I wake up grateful for another day with you. Your strength amazes me, 
+                            your compassion humbles me, and your love completes me. I promise to cherish every 
+                            laugh, support every dream, and love you more with each passing day. 
+                            With you, I've found my forever.
+                        </p>
+                        <p class="mt-3 text-muted">
+                            <i class="bi bi-sun me-2"></i> Looking forward to: Every tomorrow with you
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Love Qualities Cards -->
+            <div class="row g-4 mt-5">
+                <div class="col-md-4">
+                    <div class="love-card text-center h-100">
+                        <div class="card-icon">
+                            <i class="bi bi-brightness-high"></i>
+                        </div>
+                        <h4>Your Light</h4>
+                        <p>
+                            You brighten even my darkest days with your radiant spirit and infectious positivity. 
+                            Your laughter is my favorite sound, your smile my greatest treasure.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="love-card text-center h-100">
+                        <div class="card-icon">
+                            <i class="bi bi-gem"></i>
+                        </div>
+                        <h4>Your Strength</h4>
+                        <p>
+                            Your resilience inspires me daily. You face challenges with grace and overcome 
+                            obstacles with determination, all while maintaining your kind heart.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="love-card text-center h-100">
+                        <div class="card-icon">
+                            <i class="bi bi-magic"></i>
+                        </div>
+                        <h4>Your Magic</h4>
+                        <p>
+                            There's something truly magical about the way you love - completely, unconditionally, 
+                            and with your whole heart. You've turned ordinary moments into extraordinary memories.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MUSIC & MEMORIES SECTION -->
+    <section class="py-5" id="music" style="background: linear-gradient(135deg, rgba(232, 67, 147, 0.1), rgba(255, 215, 0, 0.05));">
+        <div class="container">
+            <h2 class="script-heading text-center mb-5">
+                Songs of Our Love
+            </h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Music Introduction -->
+                    <div class="love-card text-center mb-5">
+                        <h3 class="mb-4">Ugandan Melodies of the Heart</h3>
+                        <p class="fs-5">
+                            Music has always been the language of our souls. These Ugandan love songs remind me 
+                            of different chapters in our story - each melody capturing a unique moment, 
+                            each lyric expressing what my heart feels for you.
+                        </p>
+                    </div>
+                    
+                    <!-- Music Player -->
+                    <div class="music-player-card">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h4 id="currentSong" class="mb-2">Eddy Kenzo - Sitya Loss</h4>
+                                <p class="song-description">
+                                    This song reminds me of how you dance without care, losing yourself in the moment, 
+                                    and how that freedom inspires me every day.
+                                </p>
+                                <div class="progress mt-3" style="height: 8px; background: rgba(255,255,255,0.1);">
+                                    <div class="progress-bar" id="musicProgress" 
+                                         style="background: linear-gradient(90deg, var(--deep-pink), var(--gold)); width: 45%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex justify-content-center gap-3">
+                                    <button class="btn btn-outline-light btn-lg" id="prevBtn">
+                                        <i class="bi bi-skip-backward"></i>
+                                    </button>
+                                    <button class="btn btn-light btn-lg px-4" id="playBtn">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                    <button class="btn btn-outline-light btn-lg" id="nextBtn">
+                                        <i class="bi bi-skip-forward"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Song Meanings -->
+                    <div class="row g-4 mt-4">
+                        <div class="col-md-6">
+                            <div class="love-card h-100">
+                                <h5 class="mb-3">Why These Songs?</h5>
+                                <p>
+                                    Each song in this playlist represents a facet of our love. From the joyful 
+                                    rhythms that match our happiest moments to the soulful melodies that echo 
+                                    our deep connection, these songs are the soundtrack to our story.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="love-card h-100">
+                                <h5 class="mb-3">Our Dance Floor</h5>
+                                <p>
+                                    Remember our first dance? How we moved as one, completely in sync? 
+                                    That's what these songs represent - the perfect harmony of two souls 
+                                    finding their rhythm together, creating music that only we can hear.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOVE MESSAGES SECTION -->
+    <section class="py-5" id="notes" style="background: linear-gradient(135deg, rgba(12, 12, 12, 0.9), rgba(26, 26, 46, 0.9));">
+        <div class="container">
+            <h2 class="script-heading text-center mb-5">
+                Messages from the Heart
+            </h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Form Introduction -->
+                    <div class="love-card text-center mb-5">
+                        <h3 class="mb-3">Pour Your Heart Out</h3>
+                        <p class="fs-5">
+                            Share your feelings, write a love note, or simply say hello. Every message 
+                            becomes part of our digital love story, a testament to the beautiful connection we share.
+                        </p>
+                    </div>
+                    
+                    <!-- Enhanced Form -->
+                    <div class="love-form">
+                        <h3 class="form-title">Write to My Heart</h3>
+                        <form id="loveNoteForm" action="https://formspree.io/f/mzdvwevp" method="POST">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="name" 
+                                               placeholder="Your Beautiful Name" required
+                                               style="background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.2);">
+                                        <label for="name" style="color: rgba(255,255,255,0.7);">
+                                            <i class="bi bi-person me-2"></i>Your Name
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email" 
+                                               placeholder="Your Email" required
+                                               style="background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.2);">
+                                        <label for="email" style="color: rgba(255,255,255,0.7);">
+                                            <i class="bi bi-envelope me-2"></i>Your Email
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message" name="message" 
+                                                  placeholder="Write from your heart..." 
+                                                  style="height: 200px; background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.2);" 
+                                                  required></textarea>
+                                        <label for="message" style="color: rgba(255,255,255,0.7);">
+                                            <i class="bi bi-chat-heart me-2"></i>Your Heartfelt Message
+                                        </label>
+                                    </div>
+                                    <div class="form-text mt-2" style="color: rgba(255,255,255,0.6);">
+                                        <i class="bi bi-info-circle me-2"></i>
+                                        This message will be sent directly to Tina and preserved in our digital love archive
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="publicNote" name="publicNote"
+                                               style="background: rgba(255,255,255,0.1);">
+                                        <label class="form-check-label" for="publicNote" style="color: rgba(255,255,255,0.8);">
+                                            <i class="bi bi-eye me-2"></i>
+                                            Display this message publicly on our love wall
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-lg px-5 py-3" 
+                                            style="background: linear-gradient(135deg, var(--deep-pink), var(--passion-purple)); 
+                                                   border: none; color: white; font-size: 1.2rem;">
+                                        <i class="bi bi-heart-fill me-3"></i> Send Your Love
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Sample Messages -->
+                    <div class="love-card mt-5">
+                        <h4 class="text-center mb-4">
+                            <i class="bi bi-heart text-pink me-2"></i> Love Notes for Tina
+                        </h4>
+                        <div id="notesList">
+                            <div class="message-item mb-4 p-3" style="background: rgba(255,255,255,0.05); border-radius: 15px;">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <strong style="color: var(--gold);">Forever Yours</strong>
+                                    <small class="text-muted">Today</small>
+                                </div>
+                                <p class="mb-0">
+                                    "Tina, every moment with you feels like a beautiful dream I never want to wake from. 
+                                    Your love has transformed my world in ways I never imagined possible."
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-muted">
+                                    <i class="bi bi-stars me-2"></i>
+                                    Be the next to leave your mark on our love story
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL MESSAGE SECTION -->
+    <section class="py-5" style="background: linear-gradient(135deg, rgba(232, 67, 147, 0.15), rgba(255, 215, 0, 0.1));">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="love-card text-center">
+                        <h2 class="script-heading mb-4">
+                            My Final Promise
+                        </h2>
+                        <div class="card-icon">
+                            <i class="bi bi-hearts"></i>
+                        </div>
+                        <p class="fs-4 mt-4">
+                            My dearest Tina,
+                        </p>
+                        <p class="fs-5">
+                            This website is but a digital reflection of what my heart feels every single day. 
+                            Every line of code, every animation, every song was chosen with you in mind - 
+                            because you deserve nothing less than extraordinary.
+                        </p>
+                        <p class="fs-5 mt-4">
+                            I promise to love you more today than yesterday, but less than tomorrow. 
+                            I promise to be your shelter in storms, your partner in adventures, 
+                            and your biggest supporter in all your dreams.
+                        </p>
+                        <p class="fs-5 mt-4" style="color: var(--gold);">
+                            With you, I've found my forever. With you, every day is Valentine's Day.
+                        </p>
+                        <div class="mt-5">
+                            <p class="fs-3" style="font-family: 'Dancing Script', cursive;">
+                                All my love, always and forever,
+                            </p>
+                            <p class="fs-2 mt-3" style="color: var(--deep-pink);">
+                                💖 Your Valentine 💖
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-5" style="background: rgba(0, 0, 0, 0.95);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h3 class="display-5" style="font-family: 'Great Vibes', cursive; color: var(--gold);">
+                        Eternally Yours
+                    </h3>
+                    <p class="mb-0 mt-3">
+                        Created by Johnz with <i class="bi bi-heart-fill text-danger heartbeat"></i> for the most amazing woman in the universe.
+                        <br>
+                        <small class="text-muted">This digital love letter will remain forever as a testament to our beautiful story.</small>
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end mt-4 mt-lg-0">
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+                        <button class="btn btn-outline-light px-4" id="shareBtn">
+                            <i class="bi bi-share me-2"></i> Share Our Love
+                        </button>
+                        <button class="btn btn-outline-light px-4" onclick="window.print()">
+                            <i class="bi bi-printer me-2"></i> Save Forever
+                        </button>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-link text-light" id="secretBtn">
+                            <i class="bi bi-key fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING SOCIAL BUTTONS -->
+    <div class="floating-buttons">
+        <a href="https://chat.whatsapp.com/CbYcKVxvnh2EK2w2tZWbiz?mode=gi_t" 
+           class="social-btn whatsapp-btn" 
+           target="_blank"
+           aria-label="Join Our Love Group">
+            <i class="bi bi-whatsapp"></i>
+            <span class="social-tooltip">Join Our Love Circle</span>
+        </a>
+        <a href="https://youtu.be/n3C8t3XFsGM?si=rncwGRnOf67HIlch" 
+           class="social-btn youtube-btn" 
+           target="_blank"
+           aria-label="Watch Our Love Story">
+            <i class="bi bi-youtube"></i>
+            <span class="social-tooltip">Our Love Video</span>
+        </a>
+    </div>
+
+    <!-- AUDIO ELEMENTS -->
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- MAIN JAVASCRIPT -->
+    <script>
+        // Enhanced Configuration with Rich Content
+        const CONFIG = {
+            recipientName: "Tina",
+            
+            secretMessage: `My Dearest Tina,
+
+From the moment you entered my life, everything gained meaning. Your laughter became my favorite symphony, your smile my daily sunrise, and your love my greatest blessing.
+
+This digital creation is but a whisper compared to the thunderous love that fills my heart for you. Every animation, every color, every song was chosen to reflect even a fraction of what you mean to me.
+
+You are my yesterday's dream, today's reality, and tomorrow's promise. With you, I've discovered a love that transcends time, a connection that defies distance, and a happiness that knows no bounds.
+
+Happy Valentine's Day, my love. Today and every day, you are my forever. 💖`,
+
+            // Enhanced Music Playlist with Descriptions
+            musicPlaylist: [
+                {
+                    title: "Eddy Kenzo - Sitya Loss",
+                    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+                    description: "This joyful rhythm reminds me of your free spirit and how you dance through life with such grace and happiness."
+                },
+                {
+                    title: "Radio & Weasel - Ntunga",
+                    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+                    description: "The soulful melody captures the depth of our connection, just like this song captures traditional Ugandan romance."
+                },
+                {
+                    title: "Bebe Cool - Love You Everyday",
+                    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+                    description: "A perfect declaration of daily love, mirroring how my affection for you grows stronger with each passing day."
+                }
+            ],
+
+            // Love Quotes for Rotation
+            loveQuotes: [
+                "In your eyes, I found my home. In your heart, I found my love.",
+                "Every love story is beautiful, but ours is my favorite.",
+                "You are my today and all of my tomorrows.",
+                "I saw that you were perfect, and so I loved you. Then I saw that you were not perfect, and I loved you even more.",
+                "If I had a flower for every time I thought of you, I could walk in my garden forever.",
+                "You're the missing piece I never knew I needed."
+            ],
+
+            // Form Submission URL
+            formspreeURL: "https://formspree.io/f/mzdvwevp"
+        };
+
+        // Initialize Enhanced Animations
+        function initAnimations() {
+            // Initialize GSAP
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Animate romantic quote
+            gsap.to('.romantic-quote', {
+                opacity: 1,
+                y: 0,
+                duration: 1.5,
+                delay: 0.5,
+                ease: "power2.out"
+            });
+            
+            // Stagger animation for cards
+            gsap.utils.toArray('.love-card').forEach((card, i) => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    delay: i * 0.1,
+                    ease: "back.out(1.7)"
+                });
+            });
+            
+            // Timeline animation
+            gsap.utils.toArray('.timeline-item').forEach((item, i) => {
+                gsap.from(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 80%"
+                    },
+                    x: i % 2 === 0 ? -50 : 50,
+                    opacity: 0,
+                    duration: 1,
+                    delay: i * 0.2
+                });
+            });
+            
+            // Magic text pulsing animation
+            gsap.to('#magicText', {
+                scale: 1.05,
+                duration: 1,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+        }
+
+        // Enhanced Magic Text Interaction
+        function initMagicText() {
+            const magicText = document.getElementById('magicText');
+            let clickCount = 0;
+            const messages = [
+                "✨ CLICK FOR MAGIC ✨",
+                "💖 LOVE ACTIVATED 💖",
+                "🌟 TINA'S MOMENT 🌟",
+                "🎇 HEARTS ALIGNING 🎇",
+                "💫 FOREVER BEGINS 💫",
+                "🔥 SOULS CONNECTING 🔥"
+            ];
+            
+            magicText.addEventListener('click', function() {
+                clickCount++;
+                const currentIndex = clickCount % messages.length;
+                
+                // GSAP animation for click
+                gsap.to(magicText, {
+                    scale: 1.2,
+                    duration: 0.2,
+                    yoyo: true,
+                    repeat: 1,
+                    ease: "power2.inOut",
+                    onComplete: () => {
+                        magicText.textContent = messages[currentIndex];
+                    }
+                });
+                
+                // Create floating hearts
+                createHeartExplosion(magicText);
+                
+                // Trigger effects on specific clicks
+                if (clickCount === 3) {
+                    triggerLoveExplosion();
+                }
+                
+                if (clickCount === 5) {
+                    showSecretMessage();
+                }
+            });
+            
+            function createHeartExplosion(element) {
+                const hearts = ['💖', '💝', '💕', '💓', '💗', '💞'];
+                const rect = element.getBoundingClientRect();
+                
+                for (let i = 0; i < 8; i++) {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.position = 'fixed';
+                    heart.style.fontSize = '2rem';
+                    heart.style.pointerEvents = 'none';
+                    heart.style.zIndex = '1000';
+                    heart.style.left = `${rect.left + rect.width/2}px`;
+                    heart.style.top = `${rect.top}px`;
+                    
+                    document.body.appendChild(heart);
+                    
+                    gsap.to(heart, {
+                        y: -Math.random() * 100 - 50,
+                        x: gsap.utils.random(-100, 100),
+                        rotation: gsap.utils.random(-180, 180),
+                        opacity: 0,
+                        duration: 2,
+                        ease: "power2.out",
+                        onComplete: () => heart.remove()
+                    });
+                }
+            }
+            
+            function triggerLoveExplosion() {
+                confetti({
+                    particleCount: 300,
+                    spread: 100,
+                    origin: { y: 0.6 },
+                    colors: ['#E84393', '#FFD700', '#FD79A8', '#FFFFFF', '#9D4EDD']
+                });
+                
+                // Heart-shaped confetti
+                setTimeout(() => {
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { x: 0.3 },
+                        shapes: ['heart']
+                    });
+                    
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { x: 0.7 },
+                        shapes: ['heart']
+                    });
+                }, 250);
+            }
+            
+            function showSecretMessage() {
+                Swal.fire({
+                    title: '💕 Eternal Love 💕',
+                    html: `
+                        <div class="text-center p-3">
+                            <i class="bi bi-heart-fill display-1 text-pink mb-4"></i>
+                            <p class="lead">"Tina, my love for you is infinite, eternal, and growing stronger with every beat of my heart."</p>
+                            <p class="mt-3">You've unlocked the deepest secret of my heart.</p>
+                        </div>
+                    `,
+                    confirmButtonText: 'I Love You Too 💖',
+                    confirmButtonColor: '#E84393',
+                    background: 'rgba(0,0,0,0.9)',
+                    customClass: {
+                        popup: 'love-card'
+                    }
+                });
+            }
+        }
+
+        // Enhanced Music Player
+        function initMusicPlayer() {
+            const audio = document.getElementById('bgMusic');
+            const playBtn = document.getElementById('playBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const currentSong = document.getElementById('currentSong');
+            
+            let currentTrack = 0;
+            let isPlaying = false;
+            
+            // Update song display
+            function updateSongDisplay() {
+                const track = CONFIG.musicPlaylist[currentTrack];
+                currentSong.textContent = track.title;
+                
+                // Update description if available
+                const descriptionEl = document.querySelector('.song-description');
+                if (descriptionEl && track.description) {
+                    descriptionEl.textContent = track.description;
+                }
+            }
+            
+            // Play/Pause functionality
+            playBtn.addEventListener('click', () => {
+                if (isPlaying) {
+                    audio.pause();
+                    playBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+                    playBtn.classList.remove('btn-light');
+                    playBtn.classList.add('btn-outline-light');
+                } else {
+                    audio.play().catch(e => {
+                        Swal.fire({
+                            title: 'Music Playback',
+                            text: 'Click play again to start our love soundtrack',
+                            icon: 'info',
+                            confirmButtonColor: '#E84393'
+                        });
+                    });
+                    playBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+                    playBtn.classList.remove('btn-outline-light');
+                    playBtn.classList.add('btn-light');
+                }
+                isPlaying = !isPlaying;
+            });
+            
+            // Previous track
+            prevBtn.addEventListener('click', () => {
+                currentTrack = (currentTrack - 1 + CONFIG.musicPlaylist.length) % CONFIG.musicPlaylist.length;
+                loadTrack(currentTrack);
+            });
+            
+            // Next track
+            nextBtn.addEventListener('click', () => {
+                currentTrack = (currentTrack + 1) % CONFIG.musicPlaylist.length;
+                loadTrack(currentTrack);
+            });
+            
+            // Load track function
+            function loadTrack(index) {
+                const track = CONFIG.musicPlaylist[index];
+                audio.src = track.url;
+                updateSongDisplay();
+                
+                if (isPlaying) {
+                    audio.play();
+                }
+            }
+            
+            // Initialize with first track
+            loadTrack(0);
+            
+            // Update progress bar
+            audio.addEventListener('timeupdate', () => {
+                const progress = (audio.currentTime / audio.duration) * 100 || 0;
+                document.getElementById('musicProgress').style.width = `${progress}%`;
+            });
+            
+            // Auto-rotate quotes
+            let quoteIndex = 0;
+            setInterval(() => {
+                const quoteEl = document.querySelector('.romantic-quote');
+                if (quoteEl) {
+                    quoteEl.textContent = CONFIG.loveQuotes[quoteIndex];
+                    quoteIndex = (quoteIndex + 1) % CONFIG.loveQuotes.length;
+                    
+                    // Add animation
+                    gsap.to(quoteEl, {
+                        opacity: 0,
+                        y: -20,
+                        duration: 0.5,
+                        onComplete: () => {
+                            gsap.to(quoteEl, {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.5
+                            });
+                        }
+                    });
+                }
+            }, 8000);
+        }
+
+        // Form Submission with Enhanced Feedback
+        function initFormSubmission() {
+            const form = document.getElementById('loveNoteForm');
+            
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                // Show loading state with animation
+                submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending Love...';
+                submitBtn.disabled = true;
+                
+                // Add loading animation to form
+                gsap.to(form, {
+                    boxShadow: '0 0 30px rgba(232, 67, 147, 0.5)',
+                    duration: 0.5,
+                    yoyo: true,
+                    repeat: 3
+                });
+                
+                try {
+                    const formData = new FormData(form);
+                    const response = await fetch(CONFIG.formspreeURL, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        // Success celebration
+                        confetti({
+                            particleCount: 150,
+                            spread: 70,
+                            origin: { y: 0.6 }
+                        });
+                        
+                        // Success animation
+                        gsap.to(form, {
+                            scale: 0.95,
+                            duration: 0.3,
+                            yoyo: true,
+                            repeat: 1,
+                            onComplete: () => {
+                                Swal.fire({
+                                    title: 'Love Delivered! 💖',
+                                    html: `
+                                        <div class="text-center">
+                                            <i class="bi bi-heart-fill display-1 text-pink mb-3"></i>
+                                            <p class="lead">Your heartfelt message has been sent to Tina!</p>
+                                            <p class="small text-muted">This moment is now part of your love story forever.</p>
+                                        </div>
+                                    `,
+                                    confirmButtonText: 'Continue the Love Story',
+                                    confirmButtonColor: '#E84393',
+                                    background: 'rgba(0,0,0,0.9)'
+                                });
+                            }
+                        });
+                        
+                        // Reset form
+                        form.reset();
+                        
+                        // Add to display if public
+                        if (document.getElementById('publicNote').checked) {
+                            addPublicNote(formData);
+                        }
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    Swal.fire({
+                        title: 'Love Interrupted',
+                        text: 'The message couldn\'t be sent. Please try again with all your love.',
+                        icon: 'error',
+                        confirmButtonColor: '#E84393'
+                    });
+                } finally {
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+            
+            function addPublicNote(formData) {
+                const notesList = document.getElementById('notesList');
+                const name = formData.get('name');
+                const message = formData.get('message');
+                const date = new Date().toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+                
+                const noteElement = document.createElement('div');
+                noteElement.className = 'message-item mb-4 p-3';
+                noteElement.style.background = 'rgba(255,255,255,0.05)';
+                noteElement.style.borderRadius = '15px';
+                noteElement.style.borderLeft = '3px solid var(--deep-pink)';
+                
+                noteElement.innerHTML = `
+                    <div class="d-flex justify-content-between mb-2">
+                        <strong style="color: var(--gold);">${name}</strong>
+                        <small class="text-muted">${date}</small>
+                    </div>
+                    <p class="mb-0">"${message}"</p>
+                `;
+                
+                // Add animation
+                gsap.from(noteElement, {
+                    scale: 0.8,
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.7,
+                    ease: "back.out(1.7)"
+                });
+                
+                notesList.prepend(noteElement);
+            }
+        }
+
+        // Surprise Heart Functionality
+        function initSurpriseHeart() {
+            const heartBtn = document.getElementById('surpriseHeart');
+            
+            heartBtn.addEventListener('click', () => {
+                // Enhanced heart animation
+                gsap.to(heartBtn, {
+                    scale: 1.5,
+                    duration: 0.3,
+                    yoyo: true,
+                    repeat: 1,
+                    ease: "power2.inOut",
+                    onStart: () => {
+                        heartBtn.innerHTML = '<i class="bi bi-heart-pulse"></i>';
+                    },
+                    onComplete: () => {
+                        heartBtn.innerHTML = '<i class="bi bi-heart-fill"></i>';
+                    }
+                });
+                
+                // Multi-layer confetti
+                confetti({
+                    particleCount: 200,
+                    spread: 80,
+                    origin: { y: 0.6 },
+                    colors: ['#E84393', '#FFD700', '#FD79A8']
+                });
+                
+                setTimeout(() => {
+                    confetti({
+                        particleCount: 100,
+                        angle: 60,
+                        spread: 55,
+                        origin: { x: 0 }
+                    });
+                    
+                    confetti({
+                        particleCount: 100,
+                        angle: 120,
+                        spread: 55,
+                        origin: { x: 1 }
+                    });
+                }, 150);
+                
+                // Enhanced SweetAlert
+                Swal.fire({
+                    title: `For My Beloved ${CONFIG.recipientName} 💝`,
+                    html: `
+                        <div class="text-start p-4">
+                            <p class="lead">${CONFIG.secretMessage}</p>
+                            <div class="mt-4">
+                                <button class="btn btn-pink w-100 mb-3 py-3" id="swalGalleryBtn">
+                                    <i class="bi bi-images me-2"></i> View Our Love Gallery
+                                </button>
+                                <button class="btn btn-outline-pink w-100 py-3" id="swalNotesBtn">
+                                    <i class="bi bi-heart me-2"></i> Write a Love Note
+                                </button>
+                            </div>
+                        </div>
+                    `,
+                    showConfirmButton: false,
+                    showCloseButton: true,
+                    width: 600,
+                    background: 'rgba(0, 0, 0, 0.9)',
+                    backdrop: 'rgba(232, 67, 147, 0.2)',
+                    customClass: {
+                        popup: 'love-card'
+                    }
+                }).then(() => {
+                    setTimeout(() => {
+                        document.getElementById('swalGalleryBtn')?.addEventListener('click', () => {
+                            Swal.close();
+                            document.getElementById('music').scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        });
+                        
+                        document.getElementById('swalNotesBtn')?.addEventListener('click', () => {
+                            Swal.close();
+                            document.getElementById('notes').scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                            document.getElementById('name').focus();
+                        });
+                    }, 100);
+                });
+            });
+        }
+
+        // Share Functionality
+        function initShare() {
+            document.getElementById('shareBtn').addEventListener('click', () => {
+                const shareData = {
+                    title: `For ${CONFIG.recipientName} - A Cinematic Valentine's Experience`,
+                    text: 'Experience this breathtaking digital love letter created with pure affection! 💖',
+                    url: window.location.href
+                };
+                
+                if (navigator.share) {
+                    navigator.share(shareData);
+                } else {
+                    navigator.clipboard.writeText(shareData.url).then(() => {
+                        Swal.fire({
+                            title: 'Link Copied! 💝',
+                            text: 'Share this beautiful love story with others',
+                            icon: 'success',
+                            timer: 2000,
+                            showConfirmButton: false
+                        });
+                    });
+                }
+            });
+        }
+
+        // Initialize Everything
+        document.addEventListener('DOMContentLoaded', () => {
+            initAnimations();
+            initMagicText();
+            initMusicPlayer();
+            initFormSubmission();
+            initSurpriseHeart();
+            initShare();
+            
+            console.log('💖 Cinematic Valentine Experience Fully Loaded with Rich Content!');
+        });
+
+        // Fallback for JavaScript disabled
+        if (!document.querySelector('script')) {
+            document.body.innerHTML = `
+                <div class="container text-center py-5">
+                    <h1 class="display-1" style="font-family: 'Great Vibes', cursive;">Happy Valentine's Day, ${CONFIG.recipientName}!</h1>
+                    <p class="lead mt-4">${CONFIG.secretMessage}</p>
+                    <p class="mt-4">Please enable JavaScript for the full cinematic love experience!</p>
+                </div>
+            `;
+        }
+    </script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
